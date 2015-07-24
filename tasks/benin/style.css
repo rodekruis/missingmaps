@@ -1,0 +1,27 @@
+.mainImage {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(header.jpeg) no-repeat bottom center scroll;
+    background-color: #000;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+    -o-background-size: contain;
+}
+
+.mainImage .intro-body .intro-text {
+        font-size: 25px;
+}
+
+#myCarousel img {
+  width: auto;
+  height: 400px;
+}
+
+#myCarousel h1 {
+  color: #FFFFFF;
+}
