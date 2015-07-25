@@ -7,7 +7,7 @@
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(header.jpeg) no-repeat bottom center scroll;
+    background: url(country.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: contain;
     -moz-background-size: contain;
@@ -17,6 +17,7 @@
 
 .intro .intro-body .intro-text {
     font-size: 25px;
+    color:#000000;
 }
 
 #myCarousel img {
