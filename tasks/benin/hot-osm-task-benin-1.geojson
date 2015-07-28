@@ -1,0 +1,47 @@
+{
+  "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          2.5329345476,
+          6.4379255226
+        ],
+        [
+          2.5329345476,
+          6.5082256977
+        ],
+        [
+          2.5600454612,
+          6.5082256977
+        ],
+        [
+          2.5600454612,
+          6.4379255226
+        ],
+        [
+          2.5329345476,
+          6.4379255226
+        ]
+      ]
+    ]
+  },
+  "type": "Feature",
+  "id": XXX,
+  "properties": {
+    "status": 1,
+    "changeset_comment": "#MissingMaps, Benin, #hotosm-project-XXX, #RodeKruis",
+    "name": "Benin, 2015 - Red Cross Project areas ",
+    "license": 1,
+    "created": "2015-07-28T23:52:18Z",
+    "description": "This job aims at updating and improving the map of [Benin](http://en.wikipedia.org/wiki/Benin). The mapping encompasses mapping a series of villages along a river prone to flooding.",
+    "author": "Maarten van der Veen",
+    "per_task_instructions": "",
+    "last_update": "2015-07-28T23:52:18Z",
+    "priority": 0,
+    "done": 3.64,
+    "short_description": "This job aims at updating and improving the map of [Benin](http://en.wikipedia.org/wiki/Benin). The mapping encompasses mapping a series of villages along a river prone to flooding.",
+    "validated": 2.16,
+    "instructions": "1. First pick up your task and load the data and the Bing Imagery. \r\n\r\n2. Please label all buildings as general buildings. The local community will add their detailed local knowledge to the map after we complete the task.\r\n\r\n3. Map roads and smaller paths for as far as you can follow them.\r\n\r\n."
+  }
+}

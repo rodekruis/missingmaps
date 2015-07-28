@@ -7,7 +7,7 @@
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(country.jpg) no-repeat bottom center scroll;
+    background: url(img/country.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: contain;
     -moz-background-size: contain;
@@ -21,10 +21,19 @@
 }
 
 #myCarousel img {
-  width: auto;
+  width: 100%;
   height: 400px;
 }
 
 #myCarousel h1 {
+  color: #FFFFFF;
+}
+
+#myCarouselRedCross img {
+  width: 100%;
+  height: 528px;
+}
+
+#myCarouselRedCross h1 {
   color: #FFFFFF;
 }

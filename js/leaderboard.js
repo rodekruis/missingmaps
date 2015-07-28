@@ -1,6 +1,6 @@
 (function(){
   // extend app w/ map module
-  $.extend({}, {
+  $.extend(app, {
     osmHistoryBaseURL: 'https://api.developmentseed.org/osm?search=comment:%22missingmaps%22&limit=100&skip=1',
     blacklist: ['JamesLC'],
     contributorGeoJSONLayer: null,
@@ -24,24 +24,37 @@
 
     loadContributors: function(){
       $.getJSON(app.osmHistoryBaseURL, function(data){
-        var result = new jinqJs()
-                .from(data.results)
-                .groupBy('User').sum('num_changes')
-                .select([{field: 'user'}, {field: 'num_changes', text: 'Total edits'}]);
-
+        var result = Enumerable.From(data.results)
+            .GroupBy("$.user", null,
+                function (key, g) {
+                    var result = {
+                        user: key,
+                        total: g.Sum(function (x) { return parseInt(x.num_changes) })
+                    }
+                    return result;
+                })
+            .OrderByDescending(function (x) {
+                return parseInt(x.total);
+            })
+            .ToArray();
+        
         // limit the length of the leaderboard?
         // data.slice(0,15);
 
-        // construct panel tab buttons
+          //var columns = ['user','total'];
+          //tabulate(result,columns);
+          
+          
+          // construct panel tab buttons
         var editorsContainer = $('#top-editors'),
             panelContainer = $('<div class="tabs-content">'),
             rowsPerPanel = 10,
-            panelCount = Math.ceil(data.length / rowsPerPanel);
+            panelCount = Math.ceil(result.length / rowsPerPanel);
 
-        var editorsPanelTabs = $('<ul class="tabs text-center" data-tab>');
+        var editorsPanelTabs = $('<ul class="nav nav-tabs text-center">');
         for(var panelIdx = 1; panelIdx <= panelCount; panelIdx++){
           var tabButton = $('<li class="tab-title">'),
-              tabButtonLink = $('<a href="#panel' + panelIdx + '">' + panelIdx + '</a>');
+              tabButtonLink = $('<a href="#panel' + panelIdx + '" data-toggle="tab">' + panelIdx + '</a>');
 
           if(panelIdx === 1) tabButton.addClass('active');
           tabButton.append( tabButtonLink );
@@ -65,62 +78,21 @@
             app.addRowTo( $('div#panel' + panelNumber), editor, idx + 1 );
           }
         });
-
-        // silly to have to call this again, but must run at the end of the getJSON call
-        $(document).foundation();
-      });
+        
+        });      
 
     },
 
     addRowTo: function(panel, editor, rank){
       var row = $('<li class="top-editor clearfix">').appendTo( panel ),
-          userNameLink = $('<a href="#">')
-                           .text(editor.user)
-                           .on('click', app.loadContributorGeoJSON);
+          userNameLink = '<a href="http://www.openstreetmap.org/user/' + editor.user + '" target="_new">' + editor.user + '</a>';
       
       row.append( $('<span class="small-1 columns text-center">').text(rank) );    
       row.append( $('<span class="small-5 columns">').html(userNameLink) );
-      row.append( $('<span class="small-2 columns text-right">').text(editor.nodes + editor.ways) );
-      row.append( $('<span class="small-2 columns text-right">').text(editor.nodes) );
-      row.append( $('<span class="small-2 columns text-right">').text(editor.ways) );
+      row.append( $('<span class="small-2 columns text-right">').text(editor.total) );
+
     },
 
-    loadContributorGeoJSON: function(e){
-      e.preventDefault();
-      e.stopPropagation();
-
-      // prevent repeat click when loading geojson
-      if(app.loadingContributorGeoJSON) return false;
-      app.loadingContributorGeoJSON = true;
-
-      var $this = $(this);
-
-      // remove existing geojson layer, if any
-      if(app.contributorGeoJSONLayer){
-        app.map.removeLayer(app.contributorGeoJSONLayer);
-        $('li.top-editor a.active').removeClass('active');
-      }
-
-      $this.addClass('active');
-
-      $('html, body').animate({ scrollTop: $('#map-container').offset().top }, app.ANIMATION.scroll);
-
-      $.getJSON(app.osmHistoryBaseURL + 'user_list_with_geometry/' + this.text + '.json', function(data){
-
-        var geojson = L.mapbox.featureLayer(data).setStyle({
-          className: 'user-edits'
-          // color: '#7AE0FD',
-          // lineCap: 'round',
-          // opacity: 1,
-          // weight: 3
-        });
-        app.map.fitBounds(geojson.getBounds()).addLayer(geojson);
-        app.contributorGeoJSONLayer = geojson;
-
-        app.loadingContributorGeoJSON = false;
-      });
-    }
-
-  });
+    });
 
 })()

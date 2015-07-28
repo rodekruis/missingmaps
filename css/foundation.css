@@ -3335,7 +3335,11 @@ meta.foundation-mq-topbar {
       float: none; }
     .tabs-content > .content.contained {
       padding: 0.9375rem; }
-  .tabs-content.vertical {
+  li {
+      list-style-type: none;
+      text-align:left;
+      font-size: 16px; }
+    .tabs-content.vertical {
     display: block; }
     .tabs-content.vertical > .content {
       padding: 0 0.9375rem; }
