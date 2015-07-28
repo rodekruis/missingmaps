@@ -1,7 +1,7 @@
 (function(){
   // extend app w/ map module
   $.extend(app, {
-    osmHistoryBaseURL: 'https://api.developmentseed.org/osm?search=comment:%22missingmaps%22&limit=100&skip=1',
+    osmHistoryBaseURL: 'https://api.developmentseed.org/osm?search=comment:%22missingmaps%22&limit=1000&skip=0',
     blacklist: ['JamesLC'],
     contributorGeoJSONLayer: null,
     loadingContributorGeoJSON: false,
