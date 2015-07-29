@@ -37,3 +37,62 @@
 #myCarouselRedCross h1 {
   color: #FFFFFF;
 }
+
+@font-face {
+font-family: 'Cisalpin';
+src: url('../../fonts/CisalpinLTStd-Regular.otf'); }
+   
+#mapAtitle {
+    left:1%;
+    bottom:15%;
+    width:35%;
+    float:left;
+    z-index:2;
+    background-color:rgba(255,255,255,0.7);
+}
+
+#mapBtitle {
+    left:65%;
+    width:30%;
+    bottom:15%;
+    float:right;
+    z-index:2;
+    background-color:rgba(255,255,255,0.7);
+}
+
+#navigation {
+    position:relative;
+    top:14%;
+    right:1%; 
+    z-index:1;
+    font-weight:bold;
+    font-family: 'Cisalpin';
+    padding:0px;
+}
+
+
+.btn-zoom {
+    position: relative;
+    left: 25px;
+    top: 25%;
+    z-index: 1;
+    background-color: #ffffff;
+    border-color: #d7d7d8;
+    font-weight: bold;
+    color: #6d6e70;
+    box-shadow: 1px 1px 5px #757575;
+}
+
+#range {
+  width: 100%;
+  position: relative;
+  top:11%;
+}
+
+.leaflet-top {
+    z-index:1 !important;
+}
+
+.leaflet-top .leaflet-control-zoom {
+  margin-top: 110px;
+}

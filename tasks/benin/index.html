@@ -49,13 +49,15 @@
     <![endif]-->
 
     <link rel="stylesheet" href="../../fonts/mapglyphs/mapglyphs.css" />
-<link rel="stylesheet" href="../../css/normalize.css" />
-<link rel="stylesheet" href="../../css/foundation.css" />
+    <link rel="stylesheet" href="../../css/normalize.css" />
+    <link rel="stylesheet" href="../../css/foundation.css" />
     
     <!-- Custom CSS -->
     <link href="../../css/grayscale.css" rel="stylesheet">
     
-<link rel="stylesheet" href="style.css" />
+    <link href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+    
+    <link rel="stylesheet" href="style.css" />
 
 </head>
 
@@ -307,6 +309,30 @@
     </div>
   </section>
     
+  <section id="beforeafter" class="row clearfix">
+    <br/>
+    <h2 class="text-center">Before and After</h2>
+    <p class="text-center shrink mbl">Below is a view of the efforts of missing maps on this task up to today</p>
+    <div id='navigation' class="btn-group">
+      <select>
+        <option value="" style="display:none">Please select a task</option>
+        <option value="Task 1">Task 1</option>
+        <option value="Task 2">Task 2</option>
+        <option value="Task 3">Task 3</option>
+      </select>
+    </div>
+    <div>
+        <div id='mapAtitle' class='datelabel'>OpenStreetMap <p style="color:#9F9FA3">Before Response<p></div>
+        <div id='mapBtitle' class='datelabel'>OpenStreetMap <p style="color:#9F9FA3">Today<p></div>
+    </div>
+    <div id='map'></div>
+    <input id="range" type="range" min="0" max="1.0" step="any" />
+    
+    <p><a href="http://resultmaps.neis-one.org/osm-missingmaps#14/6.4687/2.5749" target="_new">See changes to this area in openstreetmap</a></p>
+  </section>
+  <div>
+        
+    
 
     <!-- Footer -->
     <footer>
@@ -317,19 +343,7 @@
 
     <!-- jQuery Version 1.11.0 -->
     <script type="text/javascript" src="../../js/jquery-1.11.0.js"></script>
-    
-    <!-- Linq.js 3.0.4 Beta 5 -->
-    <script type="text/javascript" src="../../js/linq.js"></script>
-    
-    <!-- Common -->
-    <script type="text/javascript" src="../../js/common.js"></script>
-    
-    <!-- d3 tabulate -->
-    <script type="text/javascript" src="../../js/tabulate.js"></script>
-    
-     <!-- Leaderboard -->
-    <script type="text/javascript" src="../../js/leaderboard.js"></script>
-
+      
     <!-- d3 Version 3.5.3 -->
     <script type="text/javascript" src="../../js/d3.min.js"></script>
 
@@ -342,10 +356,22 @@
     <!-- Custom Theme JavaScript -->
     <script type="text/javascript" src="../../js/grayscale.js"></script>
 
+    <!-- Before/after libs -->
+    <script src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
+    <script src='../../lib/Bing.js'></script>
+    <script src='../../lib/Google.js'></script>
+    <script src='../../js/beforeafter.js'></script>
+    
+    <!-- initiate leaderboard -->
+    <!-- -- Linq.js 3.0.4 Beta 5 -->
+    <script type="text/javascript" src="../../js/linq.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript" src="../../js/leaderboard.js"></script>
     <script>
         app.osmHistoryBaseURL = 'https://api.developmentseed.org/osm?search=comment:%22missingmaps%20Benin%22&limit=1000&skip=0';
         app.initLeaderboard();
-      </script>
+    </script>
     
 </body>
 

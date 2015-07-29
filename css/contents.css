@@ -1,0 +1,88 @@
+
+html {
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#map{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width:100%;
+
+}
+
+.datelabel {
+    position: absolute;
+    bottom: 100px;
+    z-index:2;
+    opacity:0.75;
+    height: 0px;
+    background-color: white;
+    color: #ED1B2E;
+    font-family: 'Cisalpin';
+    font-size:2em;
+    font-color:#fff000;
+}
+
+#mapAtitle {
+    width:35%;
+    text-align:left;
+
+}
+#mapBtitle {
+    left:70%;
+    width:30%;
+    text-align:right;
+
+}
+
+#navigation {
+    position:absolute;
+    top:7%;
+    right:25px; 
+    z-index:1;
+    font-weight:bold;
+    font-family: 'Cisalpin';
+    padding:0px;
+}
+
+
+#myModal {
+    position:absolute;
+}
+
+.modal-dialog {
+    top:50px; 
+}
+
+.modal-header {
+    background-color:#ff0000;
+}
+
+.modal-title {
+    font-color:white;
+}
+
+.btn-zoom {
+    position: absolute;
+    left: 25px;
+    top: 15%;
+    z-index: 2;
+    background-color: #ffffff;
+    border-color: #d7d7d8;
+    font-weight: bold;
+    color: #6d6e70;
+    box-shadow: 1px 1px 5px #757575;
+}
+
+#range {
+  width: 100%;
+  position: absolute;
+}
+.leaflet-top .leaflet-control-zoom {
+  margin-top: 20px;
+}

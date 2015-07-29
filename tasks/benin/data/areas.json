@@ -1,0 +1,26 @@
+[
+    {
+        "city": "Task 1",
+        "country": "Benin",
+        "lat": 6.4654,
+        "lon": 2.5315,
+        "zoom": 14,
+        "mapboxID": "rodekruis.7lkmaemi"
+    },
+    {
+        "city": "Task 2",
+        "country": "Benin",
+        "lat": 6.5129,
+        "lon": 2.5363,
+        "zoom": 15,
+        "mapboxID": "rodekruis.7lkmaemi"
+    },
+    {
+        "city": "Task 3",
+        "country": "Benin",
+        "lat": 6.4757,
+        "lon": 2.6037,
+        "zoom": 16,
+        "mapboxID": "rodekruis.7lkmaemi"
+    }    
+]
