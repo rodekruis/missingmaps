@@ -253,34 +253,66 @@
             <br/>
              <h2>Start mapping!</h2>
              <p>The target for this task is to map roads and buildings. </p>
-            <h3>Remote mapping</h3>
-            <p><b>Imagery</b>: Use Bing Imagery</p>
-            <p><b>Buildings</b>: Please label all buildings as general buildings. The local community will add their detailed local knowledge to the map after we complete the task. </p>
-            <p><b>Roads</b>: Map roads and smaller paths for as far as you can follow them. <br />
+             
+             <div class="panel-group" id="accordion">
+                <div class="panel panel-default" id="panel1">
+                    <div class="panel-heading">
+                         <h4 class="panel-title">
+                            <a data-toggle="collapse" data-target="#collapseOne" 
+                               href="#collapseOne">
+                              Remote mapping instructions
+                            </a>
+                          </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <p><b>Imagery</b>: Use Bing Imagery</p>
+                            <p><b>Buildings</b>: Please label all buildings as general buildings. The local community will add their detailed local knowledge to the map after we complete the task. </p>
+                            <p><b>Roads</b>: Map roads and smaller paths for as far as you can follow them. <br />
+                            
+                                “The road conditions in Africa do not always correspond to their economic and social role. A road typology should be based on the road importance and not on the surface or the visual appearance of the road”. --Highway Tag Africa, OpenStreetMap Wiki <br/>
+                                
+                                It can be hard to know the economic and social role of a road, but we can guess that a road is important to trace if it connects other roads, clusters of buildings, or towns and villages. Please use the tags below, taken from the OpenStreetMap Wiki:<br/>
+                                <ul>
+                                    <li>Tertiary Road: The roads interconnecting villages and the major streets in towns of some importance.</li>
+                                    <li>Residential Road: The roads in residential areas except for major streets that interconnect with various roads (i.e. primary, secondary, tertiary).</li>
+                                    <li>Unclassified Road: The roads serving for interconnection of smaller villages and hamlets.</li>
+                                    <li>Track: The small roads going outside the residential areas, mainly for agricultural and forestry purposes. In general these roads do not have a connecting function with other roads.</li>
+                                </ul>                           
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default" id="panel2">
+                    <div class="panel-heading">
+                         <h4 class="panel-title">
+                    <a data-toggle="collapse" data-target="#collapseTwo" 
+                       href="#collapseTwo" class="collapsed">
+                      Local mapping instructions
+                    </a>
+                  </h4>
             
-                “The road conditions in Africa do not always correspond to their economic and social role. A road typology should be based on the road importance and not on the surface or the visual appearance of the road”. --Highway Tag Africa, OpenStreetMap Wiki <br/>
-                
-                It can be hard to know the economic and social role of a road, but we can guess that a road is important to trace if it connects other roads, clusters of buildings, or towns and villages. Please use the tags below, taken from the OpenStreetMap Wiki:<br/>
-                
-                Tertiary Road: The roads interconnecting villages and the major streets in towns of some importance.<br/>
-                
-                Residential Road: The roads in residential areas except for major streets that interconnect with various roads (i.e. primary, secondary, tertiary).<br/>
-                
-                Unclassified Road: The roads serving for interconnection of smaller villages and hamlets.<br/>
-                
-                Track: The small roads going outside the residential areas, mainly for agricultural and forestry purposes. In general these roads do not have a connecting function with other roads.<br/>
-            </p>
-            <h3>Local mapping</h3>
-            <p>For those on the ground in Benin, there are specific mapping targets.</p>
-            <p><b>Buildings</b>: Add specific labels to buildings to classify it as health stations, schools, etc. Benin is full of "compounds". Those are structures, for example a health station or a school, which are typically surrounded by a wall, with one or more entries. Local mappers could update the building features to separate walls and buildings and mark the compound area.</p>
-            <p><b>Roads</b>: Verify road types and add specific labels <br />
-            <p><b>Water points</b>: In Benin-villages the wells and water-points are very important. I find that development agencies keep putting more wells down all the time and sometimes they seem to be unaware about existing wells near by. <br/>
-                <i>amenity	drinking_water</i>: the tricky bit here in Benin is the definition of fit-for-drinking; if we tag something as drinking water, the quality might be fine for certain people and make other people sick. Or the quality can change and often the mappers are short-term-guests and cannot do follow-up
-                <br/>
-                <i>man_made	water_well</i>: This one looks promising, but according to the Map Features page, it does not even get rendered.
-                <br/>
-                <i>amenity	watering_place</i>: This is meant for animals, but you know how local wells can be integrated for humans and the off-flow for animals
-            </p>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            
+                            <p>For those on the ground in Benin, there are specific mapping targets.</p>
+                            <p><b>Buildings</b>: Add specific labels to buildings to classify it as health stations, schools, etc. Benin is full of "compounds". Those are structures, for example a health station or a school, which are typically surrounded by a wall, with one or more entries. Local mappers could update the building features to separate walls and buildings and mark the compound area.</p>
+                            <p><b>Roads</b>: Verify road types and add specific labels <br />
+                            <p><b>Water points</b>: In Benin-villages the wells and water-points are very important. I find that development agencies keep putting more wells down all the time and sometimes they seem to be unaware about existing wells near by. <br/>
+                                <ul>
+                                <li><i>amenity	drinking_water</i>: the tricky bit here in Benin is the definition of fit-for-drinking; if we tag something as drinking water, the quality might be fine for certain people and make other people sick. Or the quality can change and often the mappers are short-term-guests and cannot do follow-up </li>
+                                <li><i>man_made	water_well</i>: This one looks promising, but according to the Map Features page, it does not even get rendered.</li>
+                                <li><i>amenity	watering_place</i>: This is meant for animals, but you know how local wells can be integrated for humans and the off-flow for animals</li>
+                                </ul>
+                            </p>
+            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             
             
             <p>To contribute, click on the 'map Benin' link below and choose a single grid task from the Tasking Manager. Editing is handled by the Humanitarian OpenStreetMap Team's Tasking Manager.For more detailed instructions on the task manager and ID editor, check out the project <a href="../../guide.html">Mapping Guide</a>.
@@ -314,9 +346,8 @@
     <h2 class="text-center">Before and After</h2>
     <p class="text-center shrink mbl">Below is a view of the efforts of missing maps on this task up to today</p>
     <div id='navigation' class="btn-group">
-      <select>
-        <option value="" style="display:none">Please select a task</option>
-        <option value="Task 1">Task 1</option>
+      <select id="taskselector">
+        <option value="Task 1" selected="selected">Task 1</option>
         <option value="Task 2">Task 2</option>
         <option value="Task 3">Task 3</option>
       </select>
@@ -359,9 +390,18 @@
     <!-- Before/after libs -->
     <script src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
     <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
+    <script language="javascript">
+        var map = L.mapbox.map('map', null, {
+        center: [6.4654, 2.5315],
+        minzoom: 14,
+        maxzoom: 18,
+        zoom: 14
+    });
+    </script>
     <script src='../../lib/Bing.js'></script>
     <script src='../../lib/Google.js'></script>
     <script src='../../js/beforeafter.js'></script>
+    
     
     <!-- initiate leaderboard -->
     <!-- -- Linq.js 3.0.4 Beta 5 -->

@@ -36,13 +36,6 @@ $(function() {
     
     L.mapbox.accessToken = 'pk.eyJ1Ijoicm9kZWtydWlzIiwiYSI6ImVrZFNfNlkifQ.Pm-LFhTZIDqDFQtbcKZJCg';
     
-    var map = L.mapbox.map('map', null, {
-        center: [0, 0],
-        minzoom: 14,
-        maxzoom: 18,
-        zoom: 14
-    });
-
     //defining cities array
     var areas;
 

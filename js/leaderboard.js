@@ -54,7 +54,7 @@
         var editorsPanelTabs = $('<ul class="nav nav-tabs text-center">');
         for(var panelIdx = 1; panelIdx <= panelCount; panelIdx++){
           var tabButton = $('<li class="tab-title">'),
-              tabButtonLink = $('<a href="#panel' + panelIdx + '" data-toggle="tab">' + panelIdx + '</a>');
+              tabButtonLink = $('<a href="#panel_leaderboard' + panelIdx + '" data-toggle="tab">' + panelIdx + '</a>');
 
           if(panelIdx === 1) tabButton.addClass('active');
           tabButton.append( tabButtonLink );
@@ -69,13 +69,13 @@
           var panelNumber = Math.ceil(idx / rowsPerPanel);
           if(idx % rowsPerPanel === 0){
             // construct panels
-            var panel = $('<div class="content" id="panel' + (panelNumber + 1) + '">');
+            var panel = $('<div class="content" id="panel_leaderboard' + (panelNumber + 1) + '">');
             if(idx === 0) panel.addClass('active');
             app.addRowTo(panel, editor, idx + 1 );
             panel.appendTo( panelContainer );
           }else{
             // append to existing panel
-            app.addRowTo( $('div#panel' + panelNumber), editor, idx + 1 );
+            app.addRowTo( $('div#panel_leaderboard' + panelNumber), editor, idx + 1 );
           }
         });
         
