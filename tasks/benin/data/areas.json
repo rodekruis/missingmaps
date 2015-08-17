@@ -1,26 +1,26 @@
 [
     {
-        "city": "Task 1",
+        "city": "Aguegues",
         "country": "Benin",
-        "lat": 6.4654,
-        "lon": 2.5315,
-        "zoom": 14,
-        "mapboxID": "rodekruis.7lkmaemi"
-    },
-    {
-        "city": "Task 2",
-        "country": "Benin",
-        "lat": 6.5129,
-        "lon": 2.5363,
-        "zoom": 15,
-        "mapboxID": "rodekruis.7lkmaemi"
-    },
-    {
-        "city": "Task 3",
-        "country": "Benin",
-        "lat": 6.4757,
-        "lon": 2.6037,
+        "lat": 6.4490,
+        "lon": 2.5442,
         "zoom": 16,
-        "mapboxID": "rodekruis.7lkmaemi"
+        "mapboxID": "rodekruis.a8yw4s4i"
+    },
+    {
+        "city": "Village up north",
+        "country": "Benin",
+        "lat": 6.4788,
+        "lon": 2.5479,
+        "zoom": 16,
+        "mapboxID": "rodekruis.a8yw4s4i"
+    },
+    {
+        "city": "Porto-Novo",
+        "country": "Benin",
+        "lat": 6.4974,
+        "lon": 2.6241,
+        "zoom": 14,
+        "mapboxID": "rodekruis.a8yw4s4i"
     }    
 ]

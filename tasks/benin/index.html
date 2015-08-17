@@ -266,21 +266,29 @@
                     </div>
                     <div id="collapseOne" class="panel-collapse collapse in">
                         <div class="panel-body">
-                            <p><b>Imagery</b>: Use Bing Imagery</p>
-                            <p><b>Buildings</b>: Please label all buildings as general buildings. The local community will add their detailed local knowledge to the map after we complete the task. </p>
-                            <p><b>Roads</b>: Map roads and smaller paths for as far as you can follow them. <br />
-                            
-                                “The road conditions in Africa do not always correspond to their economic and social role. A road typology should be based on the road importance and not on the surface or the visual appearance of the road”. --Highway Tag Africa, OpenStreetMap Wiki <br/>
+                            <b>Imagery</b>: Use Bing Imagery<br /><br/>
+                            <b>Buildings</b>: Please label all buildings as general buildings. The local community will add their detailed local knowledge to the map after we complete the task.
+                            <br/><br/>
+                            <b>Roads</b>: Map roads and smaller paths for as far as you can follow them. <br />
+                                <br />
                                 
-                                It can be hard to know the economic and social role of a road, but we can guess that a road is important to trace if it connects other roads, clusters of buildings, or towns and villages. Please use the tags below, taken from the OpenStreetMap Wiki:<br/>
+                                “The road conditions in Africa do not always correspond to their economic and social role. A road typology should be based on the road importance and not on the surface or the visual appearance of the road”. --Highway Tag Africa, OpenStreetMap Wiki <br/>
+                                <br />
+                                
+                                The roads in the villages along the river Ou&eacutem&eacute are prone to seasonal flooding. Therefore, the roads need to be tagged with the following tags:
+                                <ul>
+                                    <li>flood_prone=yes</li>
+                                    <li>seasonal=yes</li>
+                                </ul>
+                                
+                                It can be hard to know the economic and social role of a road, but we can guess that a road is important to trace if it connects other roads, clusters of buildings, or towns and villages. Please use the tags below, taken from the <a href="http://wiki.openstreetmap.org/wiki/Highway_Tag_Africa" target="_new">OpenStreetMap Wiki</a>:<br/>
                                 <ul>
                                     <li>Tertiary Road: The roads interconnecting villages and the major streets in towns of some importance.</li>
                                     <li>Residential Road: The roads in residential areas except for major streets that interconnect with various roads (i.e. primary, secondary, tertiary).</li>
                                     <li>Unclassified Road: The roads serving for interconnection of smaller villages and hamlets.</li>
                                     <li>Track: The small roads going outside the residential areas, mainly for agricultural and forestry purposes. In general these roads do not have a connecting function with other roads.</li>
                                 </ul>                           
-                            </p>
-                        </div>
+                          </div>
                     </div>
                 </div>
                 <div class="panel panel-default" id="panel2">
@@ -295,19 +303,17 @@
                     </div>
                     <div id="collapseTwo" class="panel-collapse collapse">
                         <div class="panel-body">
-                            
-                            <p>For those on the ground in Benin, there are specific mapping targets.</p>
-                            <p><b>Buildings</b>: Add specific labels to buildings to classify it as health stations, schools, etc. Benin is full of "compounds". Those are structures, for example a health station or a school, which are typically surrounded by a wall, with one or more entries. Local mappers could update the building features to separate walls and buildings and mark the compound area.</p>
-                            <p><b>Roads</b>: Verify road types and add specific labels <br />
-                            <p><b>Water points</b>: In Benin-villages the wells and water-points are very important. I find that development agencies keep putting more wells down all the time and sometimes they seem to be unaware about existing wells near by. <br/>
+                            For those on the ground in Benin, there are specific mapping targets.<br/><br/>
+                            <b>Buildings</b>: Add specific labels to buildings to classify it as health stations, schools, etc. Benin is full of "compounds". Those are structures, for example a health station or a school, which are typically surrounded by a wall, with one or more entries. Local mappers could update the building features to separate walls and buildings and mark the compound area.
+                            <br/>
+                            <b>Roads</b>: Verify road types and add specific tags<br />
+                            <br/>
+                            <b>Water points</b>: In Benin-villages the wells and water-points are very important. I find that development agencies keep putting more wells down all the time and sometimes they seem to be unaware about existing wells near by. <br/>
                                 <ul>
                                 <li><i>amenity	drinking_water</i>: the tricky bit here in Benin is the definition of fit-for-drinking; if we tag something as drinking water, the quality might be fine for certain people and make other people sick. Or the quality can change and often the mappers are short-term-guests and cannot do follow-up </li>
                                 <li><i>man_made	water_well</i>: This one looks promising, but according to the Map Features page, it does not even get rendered.</li>
                                 <li><i>amenity	watering_place</i>: This is meant for animals, but you know how local wells can be integrated for humans and the off-flow for animals</li>
-                                </ul>
-                            </p>
-            
-                            
+                                </ul>       
                         </div>
                     </div>
                 </div>
@@ -347,9 +353,9 @@
     <p class="text-center shrink mbl">Below is a view of the efforts of missing maps on this task up to today</p>
     <div id='navigation' class="btn-group">
       <select id="taskselector">
-        <option value="Task 1" selected="selected">Task 1</option>
-        <option value="Task 2">Task 2</option>
-        <option value="Task 3">Task 3</option>
+        <option value="Task 1" selected="selected">Aguegues</option>
+        <option value="Task 2">Village up north</option>
+        <option value="Task 3">Porto-Novo</option>
       </select>
     </div>
     <div>
