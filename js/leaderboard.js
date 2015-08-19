@@ -2,7 +2,7 @@
   // extend app w/ map module
   $.extend(app, {
     osmHistoryBaseURL: 'https://api.developmentseed.org/osm?search=comment:%22missingmaps benin%22&limit=1000&skip=0',
-    blacklist: ['JamesLC'],
+    blacklist: ['JamesLC','YalCat','kr12','danbjoseph','Badoncal','MapperJason','LPS1','Idaes','sirwin559', 'Seosamh','Colin_Thompson','Steven_Boyd', 'KellyMcKee','Simon Little', 'pialonso', 'Des Gale', 'GemmaMcE','IndyMapper','Vormav','juanda097', 'WilliamGr','Leonmvd','captain_slow','samuelestabrook','pedrito1414'],
     contributorGeoJSONLayer: null,
     loadingContributorGeoJSON: false,
     initLeaderboard: function(){
@@ -37,6 +37,10 @@
                 return parseInt(x.total);
             })
             .ToArray();
+            
+        result = result.filter(function(editor){
+          return app.blacklist.indexOf(editor.user) === -1;
+        });
         
         // limit the length of the leaderboard?
         // data.slice(0,15);
